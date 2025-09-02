@@ -50,3 +50,91 @@
   <script src="script.js"></script>
 </body>
 </html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.about {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.songs, .contact {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.songs ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #222;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+form input, form textarea {
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+  margin-top: 2rem;
+}
+function addSong() {
+  const songName = prompt("Enter the new song title:");
+  if (songName) {
+    const li = document.createElement("li");
+    li.textContent = songName;
+    document.getElementById("song-list").appendChild(li);
+  }
+}
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.getElementById("form-message").textContent = "Thank you for your message!";
+  this.reset();
+});
