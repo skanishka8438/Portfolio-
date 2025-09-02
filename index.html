@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Singer Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🎤 KANISHKA</h1>
+    <p>Professional Singer & Songwriter</p>
+  </header>
+
+  <section class="about">
+    <img src="singer.jpg" alt="Singer Photo" />
+    <div>
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm kanishka, a passionate singer with over 10 years of experience performing pop, jazz, and soul music. Welcome to my portfolio!
+      </p>
+    </div>
+  </section>
+
+  <section class="songs">
+    <h2>🎵 Featured Songs</h2>
+    <ul id="song-list">
+      <li>Melody of the Night</li>
+      <li>Echoes of Love</li>
+      <li>Golden Voice</li>
+    </ul>
+    <button onclick="addSong()">Add a New Song</button>
+  </section>
+
+  <section class="contact">
+    <h2>📬 Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-message"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 kanishka. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
